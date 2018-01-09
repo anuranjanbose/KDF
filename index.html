@@ -18,6 +18,18 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 	display: none;
 }
 </style>
+<script type="text/javascript">
+  
+function validateForm() {
+    var x = document.forms["myForm"]["Email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
 <body>
 <!-- Links (sit on top) -->
 <div class="w3-bottom" style="background-color: red;color: white">
@@ -217,12 +229,12 @@ facilities for mental and physical growth, recently players taken workshop from 
 
 
 
-  <form class="w3-container" action="/action_page.php" target="_blank">
+  <form class="w3-container" action="/action_page.php" target="_blank" name="myForm" onsubmit="return validateForm()">
     <div class="w3-section">
       <label>Name</label>
       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
     </div>
-    <div class="w3-section">
+    <div class="w3-section" name="divEmail">
       <label>Email</label>
       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
     </div>
@@ -255,21 +267,6 @@ facilities for mental and physical growth, recently players taken workshop from 
 
 <script>
 
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
 
 
 
@@ -360,6 +357,12 @@ function toggleFunction() {
 function map() {
 	window.open("https://goo.gl/maps/DRfA18RPv6y");
 }
+
+
+
+
+
+
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?keyAIzaSyDlsKYE3Vb9u4vG-NyDUoik-TyHd3sxvOE=&callback=myMap"></script>
 
