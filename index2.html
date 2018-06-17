@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/w3-css-ver4.css">
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="css/style2.css">
-   <link rel="shortcut icon" type="image/jpg" href="img/img2/kdf.jpg">
+   <link rel="shortcut icon" type="image/jpg" href="img/img2/KDF_T&E_Logo.jpg">
 
 
 </head>
@@ -21,6 +21,8 @@
 <!-- NavBar -->
 <div class="w3-container w3-top w3-blue-gray">
 <div class="w3-bar w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-left" style="text-decoration: none;" onclick="openIndex1()"> <img src="img/img2/kdf-head.png" style="width: 25px;height: 25px;"> KDF Pvt. Ltd.</a>
+  
   <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right ">Contact</a>
   <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-right ">About Us</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right">Home</a>
@@ -29,32 +31,26 @@
 
 <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
   <a href="#" class="w3-bar-item w3-button">Home</a>
-  <a href="#" class="w3-bar-item w3-button">About Us</a>
-  <a href="#" class="w3-bar-item w3-button">Contact</a>
+  <a href="#about" class="w3-bar-item w3-button">About Us</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
 </div>
 </div>
 
 <!-- NavBar End -->
 
-<!-- KDF Heading -->
 
-
-<div class="w3-container w3-khaki" style="margin-top: 38px;">
-	<div class="w3-container w3-margin-top">
-	<img src="img/img2/kdf-head.png" style="width: 60px;height: 60px; ">
-    </div>
-  <h2>KDF Pvt. Ltd.</h2>
-</div>
-
-<!-- KDF Heading End -->
 
 <!-- Travel and Events background -->
-<div id="topper">
-<div class="w3-display-container w3-text-white " style="height: 100vh;"  >
+<div id="topper" class="w3-margin-top">
+<div class=" w3-text-white " style="height: 100%;"  >
 
+     
+      <img class="w3-image w3-padding-64 w3-margin-left" src="img/img2/KDF_T&E_Logo.jpg" style="width:100%;max-width: 300px;">
+    
+    
 	
-	  <div class="w3-padding w3-display-left">
-	  	<p class="w3-jumbo w3-bottombar">Travels & Events</p>
+	  <div class="w3-padding ">
+	  	<p><span class="w3-jumbo  w3-bottombar">KDF Travels & Events</span></p>
 	  </div>
 
 </div>
@@ -271,7 +267,9 @@ function myFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-
+function openIndex1() {
+  window.open("index.html");
+}
 
 
 var slideIndex = 1;
@@ -304,9 +302,6 @@ function showDivs(n) {
 
 
 </script>
-
-
-
 
 
 </body>
